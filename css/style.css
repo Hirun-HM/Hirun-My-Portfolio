@@ -7992,7 +7992,8 @@ button.bg-dark:focus {
   font-weight: 400 !important; }
 
 .font-weight-bold {
-  font-weight: 700 !important; }
+  font-weight: 700 !important;
+ }
 
 .font-weight-bolder {
   font-weight: bolder !important; }
@@ -8010,7 +8011,7 @@ a.text-primary:hover, a.text-primary:focus {
   color: #0056b3 !important; }
 
 .text-secondary {
-  color: #6c757d !important; }
+  color: #7d6c6c !important; }
 
 a.text-secondary:hover, a.text-secondary:focus {
   color: #494f54 !important; }
