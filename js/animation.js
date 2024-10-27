@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Titles with words broken into separate lines
     const titles = [
       ['Full', 'Stack', 'Web', '&', 'App', 'Developer'],
-      ['Machine', 'Learning', '&', 'AI', 'Learner']
+      ['Machine', 'Learning', '&', 'AI', 'Learner'],
+      ['Passionate','Creative','Problem',' Solver','Coder']
     ];
     let index = 0;
   
