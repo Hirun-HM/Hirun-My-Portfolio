@@ -115,6 +115,117 @@
   transform: scale(1.1);
 }
 
+/* Professional Photo Styles */
+.professional-photo-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.professional-photo-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #62ff07, #ffffff);
+  padding: 5px;
+  transition: all 0.4s ease;
+}
+
+.professional-photo-wrapper:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(98, 255, 7, 0.4);
+}
+
+.professional-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.photo-border {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 3px solid transparent;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #62ff07, #a0f669) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  animation: borderGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes borderGlow {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+/* Responsive Design for Professional Photo */
+@media (max-width: 768px) {
+  .professional-photo-container {
+    max-width: 300px;
+    padding: 15px;
+    margin-top: 30px;
+  }
+  
+  .professional-photo-wrapper {
+    border-radius: 15px;
+  }
+  
+  .professional-photo {
+    border-radius: 12px;
+  }
+  
+  .photo-border {
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .professional-photo-container {
+    max-width: 250px;
+    padding: 10px;
+  }
+  
+  .professional-photo-wrapper {
+    border-radius: 12px;
+  }
+  
+  .professional-photo {
+    border-radius: 10px;
+  }
+  
+  .photo-border {
+    border-radius: 17px;
+  }
+}
+
+/* Adjust home section layout for mobile */
+@media (max-width: 768px) {
+  #home-section .row {
+    flex-direction: column-reverse;
+  }
+  
+  #home-section .col-md-7 {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
 
 </style>
 
@@ -158,13 +269,10 @@
 					<div class="overlay"></div>
 					<div class="container">
 						<div
-							class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+							class="row d-md-flex no-gutters slider-text align-items-center justify-content-between"
 							data-scrollax-parent="true">
-							<div class="one-third js-fullheight order-md-last img"
-								style="background-image:url(images/about.jpg);">
-								<div class="overlay"></div>
-							</div>
-							<div class="one-forth d-flex align-items-center ftco-animate"
+							<!-- Text Content - Left Side -->
+							<div class="col-md-7 col-lg-6 d-flex align-items-center ftco-animate"
 								data-scrollax=" properties: { translateY: '70%' }">
 								<div class="text">
 									<span class="subheading">Hello!</span>
@@ -178,6 +286,15 @@
 											class="btn btn-primary py-3 px-4">LinkedIn</a>
 										<a href="https://github.com/Hirun-HM"
 											class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+								</div>
+							</div>
+							<!-- Professional Photo - Right Side -->
+							<div class="col-md-5 col-lg-5 d-flex justify-content-center align-items-center ftco-animate">
+								<div class="professional-photo-container">
+									<div class="professional-photo-wrapper">
+										<img src="images/myphoto.jpeg" alt="Hirun Mihisara Kariyawasam" class="professional-photo img-fluid">
+										<div class="photo-border"></div>
+									</div>
 								</div>
 							</div>
 						</div>
